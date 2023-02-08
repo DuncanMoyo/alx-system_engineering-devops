@@ -33,3 +33,5 @@ cp -u *.html ../ :copies all the HTML files from the current working directory t
 mv [[:upper]]* /tmp/u :moves all files beginning with an uppercase letter to the directory /tmp/u
 
 rm *~ :deletes all files in the current working directory that end with the character ~
+
+mkdir -p welcome/to/school : creates directories in a tree
