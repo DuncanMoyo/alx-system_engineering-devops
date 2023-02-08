@@ -28,4 +28,6 @@ file /tmp/iamafile :prints the type of the file named iamafile
 
 ln -s /bin/ls __ls__ :creates a symbolic file
 
-cp -u *.html ../ :copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory 
+cp -u *.html ../ :copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory
+
+mv [[:upper]]* /tmp/u :moves all files beginning with an uppercase letter to the directory /tmp/u
