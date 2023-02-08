@@ -6,4 +6,6 @@ ls :displays the contents list of your current directory
 
 cd :changes the working directory to the user's home directory
 
-ls -l : displays current directory on a long format 
+ls -l :displays current directory on a long format
+
+ls -la :displays current directory contents, including hidden files (starting with .). 
