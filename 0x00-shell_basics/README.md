@@ -8,4 +8,6 @@ cd :changes the working directory to the user's home directory
 
 ls -l :displays current directory on a long format
 
-ls -la :displays current directory contents, including hidden files (starting with .). 
+ls -la :displays current directory contents, including hidden files (starting with .).
+
+ls -lna : displays current directory contents in long format, with user and group IDs displayed numerically and including hidden files (starting with .) 
