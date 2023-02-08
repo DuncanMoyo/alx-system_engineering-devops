@@ -14,4 +14,6 @@ ls -lna :displays current directory contents in long format, with user and group
 
 mkdir /tmp/my_first_directory :creates a directory named my_first_directory in the /tmp/ directory.
 
-mv /tmp/betty /tmp/my_first_directory :move the file betty from /tmp/ to /tmp/my_first_directory 
+mv /tmp/betty /tmp/my_first_directory :move the file betty from /tmp/ to /tmp/my_first_directory
+
+rm /tmp/my_first_directory/betty :delete the file betty 
