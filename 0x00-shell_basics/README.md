@@ -23,3 +23,5 @@ rm -r /tmp/my_first_directory :deletes the directory my_first_directory that is 
 cd - :changes the working directory to the previous one
 
 ls -al . .. /boot : lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format. {there is no difference between "ls -la" and "ls -al"}
+
+file /tmp/iamafile :prints the type of the file named iamafile
