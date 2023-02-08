@@ -20,4 +20,4 @@ rm /tmp/my_first_directory/betty :delete the file betty
 
 rm -r /tmp/my_first_directory :deletes the directory my_first_directory that is in the /tmp directory
 
-cd .. :changes the working directory to the previous one
+cd - :changes the working directory to the previous one
