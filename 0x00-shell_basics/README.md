@@ -16,4 +16,6 @@ mkdir /tmp/my_first_directory :creates a directory named my_first_directory in t
 
 mv /tmp/betty /tmp/my_first_directory :move the file betty from /tmp/ to /tmp/my_first_directory
 
-rm /tmp/my_first_directory/betty :delete the file betty 
+rm /tmp/my_first_directory/betty :delete the file betty
+
+rm -r /tmp/my_first_directory :deletes the directory my_first_directory that is in the /tmp directory
