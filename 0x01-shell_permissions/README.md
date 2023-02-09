@@ -18,4 +18,6 @@ chmod ugo+x hello :script that adds execution permission to the owner, the group
 
 chmod 007 hello :gives no permissions to the owner and the group, but all the permissions to other users
 
-chmod 753 hello :shows aal rights to the owner, read and execute to the groups and write and execute to the other users
+chmod 753 hello :shows all rights to the owner, read and execute to the groups and write and execute to the other users
+
+chmod --reference=olleh hello :script that sets the mode of the file hello to be the same as olleh's mode
