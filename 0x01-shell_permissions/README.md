@@ -10,4 +10,4 @@ sudo chown betty hello :script that changes the owner of the file hello to the u
 
 touch hello :script that creates an empty file called hello
 
-chmod 100 hello :script that adds execute permission to the owner of the file hello
+chmod 744 hello :script that adds execute permission to the owner of the file hello
