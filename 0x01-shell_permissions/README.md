@@ -17,3 +17,5 @@ chmod 754 hello :script that adds execute permission to the owner and the group 
 chmod ugo+x hello :script that adds execution permission to the owner, the group owner and the other users, to the file hello
 
 chmod 007 hello :gives no permissions to the owner and the group, but all the permissions to other users
+
+chmod 753 hello :shows aal rights to the owner, read and execute to the groups and write and execute to the other users
