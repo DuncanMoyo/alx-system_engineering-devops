@@ -27,3 +27,5 @@ chmod -R ugo+X . :script that adds execute permission to all subdirectories of t
 mkdir -m 751 my_dir :script that creates a directory called my_dir with permissions 751 in the working directory.
 
 chgrp school hello :script that changes the group owner to school for the file hello
+
+chown -R vincent:staff ./ :script that changes the owner to vincent and the group owner to staff for all the files and directories in the working directory.
