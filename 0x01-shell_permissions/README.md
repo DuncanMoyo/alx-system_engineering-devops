@@ -21,3 +21,5 @@ chmod 007 hello :gives no permissions to the owner and the group, but all the pe
 chmod 753 hello :shows all rights to the owner, read and execute to the groups and write and execute to the other users
 
 chmod --reference=olleh hello :script that sets the mode of the file hello to be the same as olleh's mode
+
+chmod -R a+x :script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users
