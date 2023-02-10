@@ -25,3 +25,5 @@ chmod --reference=olleh hello :script that sets the mode of the file hello to be
 chmod -R+X. :script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users
 
 mkdir -m 751 my_dir :script that creates a directory called my_dir with permissions 751 in the working directory.
+
+sudo chown school hello :script that changes the group owner to school for the file hello
