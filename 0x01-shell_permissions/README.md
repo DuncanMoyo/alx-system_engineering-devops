@@ -29,3 +29,5 @@ mkdir -m 751 my_dir :script that creates a directory called my_dir with permissi
 chgrp school hello :script that changes the group owner to school for the file hello
 
 chown -R vincent:staff ./ :script that changes the owner to vincent and the group owner to staff for all the files and directories in the working directory.
+
+chown -h vincent:staff _hello :script that changes the owner and the group owner of _hello to vincent and staff respectively
