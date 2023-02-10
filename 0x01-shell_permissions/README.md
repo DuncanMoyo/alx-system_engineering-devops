@@ -22,4 +22,4 @@ chmod 753 hello :shows all rights to the owner, read and execute to the groups a
 
 chmod --reference=olleh hello :script that sets the mode of the file hello to be the same as olleh's mode
 
-chmod ugo+X ./* :script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users
+chmod -R+X. :script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users
