@@ -32,6 +32,6 @@ chown -R vincent:staff ./ :script that changes the owner to vincent and the grou
 
 chown -h vincent:staff _hello :script that changes the owner and the group owner of _hello to vincent and staff respectively
 
-chown --from=guillaume:betty hello :script that changes the owner of the file hello to betty only if it is owned by the user guillaume
+chown --from=guillaume betty hello :script that changes the owner of the file hello to betty only if it is owned by the user guillaume
 
 telnet towel.blinkenlights.nl :script that will play the StarWars IV episode in the terminal
