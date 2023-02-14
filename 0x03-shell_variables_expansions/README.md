@@ -9,3 +9,5 @@ Shell, init files, variables and expansions
 3-paths : a script that counts the number of directories in the PATH.
 
 4-global_variables : a script that lists environment variables.
+
+5-local_variables : a script that lists all local variables and environment variables, and functions.
