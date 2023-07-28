@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Kill the hihglander process
+
+pkill -HUP -f highlander
