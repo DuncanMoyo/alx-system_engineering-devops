@@ -1,25 +1,16 @@
 #!/usr/bin/env bash
 
-# Update and install Nginx
-sudo apt-get -y update
-sudo apt-get -y install nginx
+sudo apt update && sudo apt install nginx -y
 
-# Set up the custom header configuration
-echo 'server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    add_header X-Served-By $(hostname);
-    location / {
-        root /var/www/html;
-        index index.html;
-    }
-}' | sudo tee /etc/nginx/sites-available/custom-header
+sudo mkdir -p /var/www/html
+sudo chmod -R 755 /var/www
 
-# Create a symbolic link to enable the site
-sudo ln -s /etc/nginx/sites-available/custom-header /etc/nginx/sites-enabled/
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
-# Test Nginx configuration
-sudo nginx -t
+sudo sed -i "/server_name _;/a add_header X-Served-By $hostname;\nrewrite ^/ https://foobar.com permanent;" /etc/nginx/sites-available/default
 
-# Reload Nginx to apply the changes
-sudo systemctl reload nginx
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/page_404.html
+
+sudo sed -i '/error_page 404 /404.html;/s/404.html;/page_404.html;/' /etc/nginx/sites-available/default
+
+sudo systemctl restart nginx
