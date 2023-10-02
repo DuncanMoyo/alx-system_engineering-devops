@@ -13,6 +13,7 @@ $(hostname);\nrewrite ^/ https://foobar.com permanent;" \
 
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/page_404.html
 
-sudo sed -i '/error_page 404 /404.html;/s/404.html;/page_404.html;/' /etc/nginx/sites-available/default
+sudo sed -i '/error_page 404 /404.html;/s/404.html;/page_404.html;/' \
+/etc/nginx/sites-available/default
 
 sudo systemctl restart nginx
