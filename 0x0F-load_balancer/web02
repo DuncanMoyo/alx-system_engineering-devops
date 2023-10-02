@@ -1,0 +1,1 @@
+ssh ubuntu@34.203.38.155 -i ~/.ssh/id_rsa
