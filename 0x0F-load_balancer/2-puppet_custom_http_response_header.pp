@@ -1,27 +1,20 @@
 #  automating the creation of a custom HTTP header response, but with Puppet
 
-package { 'nginx':
-  ensure => installed,
-}
-
-file { '/etc/nginx/sites-available/default':
-  ensure  => file,
-  content => "
-server {
-  listen 80 default_server;
-  listen [::]:80 default_server;
-  add_header X-Served-By \$hostname;
-  location / {
-    root /var/www/html;
-    index index.html;
+class nginx_custom_header {
+  package { 'nginx':
+    ensure => 'installed',
   }
-}",
-  require => Package['nginx'],
+
+  file { '/etc/nginx/conf.d/custom-header.conf':
+    ensure  => 'present',
+    content => "server_tokens off;\nadd_header X-Served-By ${::hostname};",
+    notify  => Service['nginx'],
+  }
+
+  service { 'nginx':
+    ensure => 'running',
+    enable => true,
+  }
 }
 
-service { 'nginx':
-  ensure    => running,
-  enable    => true,
-  subscribe => File['/etc/nginx/sites-available/default'],
-}
-
+include nginx_custom_header
