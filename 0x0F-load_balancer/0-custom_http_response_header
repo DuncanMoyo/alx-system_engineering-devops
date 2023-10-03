@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # configure web-02 to be identical to web-01
+
 sudo apt update && sudo apt install nginx -y
 
 sudo mkdir -p /var/www/html
@@ -16,4 +17,4 @@ echo "Ceci n'est pas une page" | sudo tee /var/www/html/page_404.html
 sudo sed -i '/error_page 404 /404.html;/s/404.html;/page_404.html;/' \
 /etc/nginx/sites-available/default
 
-sudo systemctl restart nginx
+sudo service nginx restart
