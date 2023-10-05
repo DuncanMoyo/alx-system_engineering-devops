@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# This script displays information about subdomains passed to it as arguments
+
+get_subdomain_info() {
+    local domain=$1
+    local subdomain=$2
+
+    # Use dig command to get the record information
+    local record_info
+    record_info=$(dig +short "$subdomain"."$domain")
+
+    # Check if the result is empty
+    if [ -z "$record_info" ]; then
+        echo "The subdomain $subdomain does not exist for $domain."
+    else
+        # Display the information with 'A' as the hardcoded record type
+        echo "The subdomain $subdomain is a A record and points to $record_info"
+    fi
+}
+
+# Check if dig command is available
+if ! command -v dig &> /dev/null; then
+    echo "The 'dig' command is not installed. Please install it to use this script."
+    exit 1
+fi
+
+domain=$1
+subdomain=$2
+
+if [[ -z $subdomain ]]; then
+    for sub in www lb-01 web-01 web-02; do
+        get_subdomain_info "$domain" "$sub"
+    done
+else
+    get_subdomain_info "$domain" "$subdomain"
+fi
