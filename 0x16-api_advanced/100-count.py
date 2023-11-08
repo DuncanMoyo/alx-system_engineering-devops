@@ -49,7 +49,6 @@ def count_words(subreddit, word_list, after=None,
                 if title_word.lower().rstrip('!?.') == word.lower():
                     word_counts[word.lower()] += 1
 
-
     if data['after']:
         return count_words(subreddit, word_list, data['after'], word_counts)
     else:
