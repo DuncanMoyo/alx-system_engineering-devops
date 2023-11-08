@@ -42,12 +42,12 @@ def count_words(subreddit, word_list, after=None,
     titles = [post['data']['title'] for post in data['children']]
 
     for title in titles:
-        title_words = title.split()
-        for word in word_list:
-            word_counts[word.lower()] += title_words.count(word)
-            for title_word in title_words:
-                if title_word.lower().rstrip('!?.') == word.lower():
-                    word_counts[word.lower()] += 1
+    title_words = title.split()
+    for word in word_list:
+        for title_word in title_words:
+            if title_word.lower().rstrip('!?.') == word.lower():
+                word_counts[word.lower()] += 1
+
 
     if data['after']:
         return count_words(subreddit, word_list, data['after'], word_counts)
