@@ -11,6 +11,10 @@ def top_ten(subreddit):
     """
     prints first 10 hot posts for given subreddit
     """
+
+    if subreddit is None or type(subreddit) is not str:
+        print("None")
+
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     headers = {'User-Agent': 'deeIsProbing'}
     response = requests.get(url, headers=headers, allow_redirects=False)
