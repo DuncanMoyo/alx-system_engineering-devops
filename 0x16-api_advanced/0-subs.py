@@ -11,7 +11,7 @@ def number_of_subscribers(subreddit):
     """
     returns number of subs for the given subreddit.
     """
-    
+
     if subreddit is None or type(subreddit) is not str:
         return 0
 
